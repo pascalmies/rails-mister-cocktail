@@ -1,0 +1,8 @@
+<h1> How much goes in there? </h1>
+
+<%= simple_form_for [@cocktail,@dose] do |f| %>
+  <%= f.label :description %>
+  <%= f.select :description, ["a handful of", "a teaspoon of", "a shitload of", "a fuckload of", "a cup of"] %>
+  <%= f.association :ingredient %>
+  <%= f.submit %>
+  <% end %>
